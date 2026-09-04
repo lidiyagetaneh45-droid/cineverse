@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CineVerse | Discover Movies</title>
+
+    <meta name="description" content="CineVerse - Discover trending, popular and top-rated movies.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+
+<header class="navbar">
+
+    <div class="logo">
+        <span class="logo-icon">▶</span>
+        <span>Cine<span>Verse</span></span>
+    </div>
+
+    <nav class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#trending">Trending</a>
+        <a href="#popular">Popular</a>
+        <a href="#genres">Genres</a>
+        <a href="#favorites">Favorites</a>
+    </nav>
+
+    <button class="mobile-menu-btn" id="mobileMenuBtn">
+        ☰
+    </button>
+
+</header>
+
+
+<!-- ================= MOBILE NAV ================= -->
+
+<div class="mobile-menu" id="mobileMenu">
+
+    <a href="#home">Home</a>
+    <a href="#trending">Trending</a>
+    <a href="#popular">Popular</a>
+    <a href="#genres">Genres</a>
+    <a href="#favorites">Favorites</a>
+
+</div>
+
+
+<!-- ================= HERO ================= -->
+
+<section class="hero" id="home">
+
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content">
+
+        <span class="hero-label">WELCOME TO CINEVERSE</span>
+
+        <h1>
+            Your next
+            <span>favorite movie</span>
+            is waiting.
+        </h1>
+
+        <p>
+            Discover thousands of movies, explore new releases,
+            find hidden gems and build your personal watchlist.
+        </p>
+
+        <div class="hero-search">
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search for a movie..."
+                autocomplete="off"
+            >
+
+            <button id="searchBtn">
+                🔍 Search
+            </button>
+
+        </div>
+
+        <div class="quick-tags">
+
+            <span>Try:</span>
+
+            <button class="quick-search" data-search="Inception">
+                Inception
+            </button>
+
+            <button class="quick-search" data-search="Interstellar">
+                Interstellar
+            </button>
+
+            <button class="quick-search" data-search="Avengers">
+                Avengers
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= SEARCH RESULTS ================= -->
+
+<section class="section hidden-section" id="searchSection">
+
+    <div class="section-header">
+
+        <div>
+            <span class="section-label">SEARCH</span>
+            <h2 id="searchTitle">Search Results</h2>
+        </div>
+
+    </div>
+
+    <div class="movie-grid" id="searchResults"></div>
+
+</section>
+
+
+<!-- ================= TRENDING ================= -->
+
+<section class="section" id="trending">
+
+    <div class="section-header">
+
+        <div>
+            <span class="section-label">WHAT'S HOT</span>
+            <h2>Trending This Week</h2>
+        </div>
+
+        <button class="view-all-btn" id="trendingViewAll">
+            View All →
+        </button>
+
+    </div>
+
+    <div class="movie-grid" id="trendingMovies"></div>
+
+</section>
+
+
+<!-- ================= POPULAR ================= -->
+
+<section class="section alternate-section" id="popular">
+
+    <div class="section-header">
+
+        <div>
+            <span class="section-label">MOST WATCHED</span>
+            <h2>Popular Movies</h2>
+        </div>
+
+    </div>
+
+    <div class="movie-grid" id="popularMovies"></div>
+
+</section>
+
+
+<!-- ================= TOP RATED ================= -->
+
+<section class="section" id="topRated">
+
+    <div class="section-header">
+
+        <div>
+            <span class="section-label">CRITICS' CHOICE</span>
+            <h2>Top Rated</h2>
+        </div>
+
+    </div>
+
+    <div class="movie-grid" id="topRatedMovies"></div>
+
+</section>
+
+
+<!-- ================= GENRES ================= -->
+
+<section class="section genres-section" id="genres">
+
+    <div class="section-header">
+
+        <div>
+            <span class="section-label">EXPLORE</span>
+            <h2>Browse By Genre</h2>
+        </div>
+
+    </div>
+
+    <div class="genre-grid">
+
+        <button class="genre-card" data-genre="28">
+            <span>💥</span>
+            <strong>Action</strong>
+        </button>
+
+        <button class="genre-card" data-genre="35">
+            <span>😂</span>
+            <strong>Comedy</strong>
+        </button>
+
+        <button class="genre-card" data-genre="27">
+            <span>👻</span>
+            <strong>Horror</strong>
+        </button>
+
+        <button class="genre-card" data-genre="878">
+            <span>🚀</span>
+            <strong>Sci-Fi</strong>
+        </button>
+
+        <button class="genre-card" data-genre="18">
+            <span>🎭</span>
+            <strong>Drama</strong>
+        </button>
+
+        <button class="genre-card" data-genre="10749">
+            <span>❤️</span>
+            <strong>Romance</strong>
+        </button>
+
+        <button class="genre-card" data-genre="53">
+            <span>🔪</span>
+            <strong>Thriller</strong>
+        </button>
+
+        <button class="genre-card" data-genre="14">
+            <span>🧙</span>
+            <strong>Fantasy</strong>
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- ================= GENRE RESULTS ================= -->
+
+<section class="section hidden-section" id="genreSection">
+
+    <div class="section-header">
+
+        <div>
+            <span class="section-label">GENRE</span>
+            <h2 id="genreTitle">Movies</h2>
+        </div>
+
+    </div>
+
+    <div class="movie-grid" id="genreResults"></div>
+
+</section>
+
+
+<!-- ================= FAVORITES ================= -->
+
+<section class="section alternate-section" id="favorites">
+
+    <div class="section-header">
+
+        <div>
+            <span class="section-label">YOUR COLLECTION</span>
+            <h2>My Favorites ❤️</h2>
+        </div>
+
+    </div>
+
+    <div class="movie-grid" id="favoriteMovies"></div>
+
+</section>
+
+
+<!-- ================= NEWSLETTER ================= -->
+
+<section class="newsletter">
+
+    <div class="newsletter-content">
+
+        <span class="section-label">STAY UPDATED</span>
+
+        <h2>Never miss a great movie.</h2>
+
+        <p>
+            Get movie recommendations and the latest releases
+            delivered straight to your inbox.
+        </p>
+
+        <form id="newsletterForm">
+
+            <input
+                type="email"
+                id="emailInput"
+                placeholder="Enter your email address"
+                required
+            >
+
+            <button type="submit">
+                Subscribe
+            </button>
+
+        </form>
+
+    </div>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <div class="footer-main">
+
+        <div class="footer-brand">
+
+            <div class="logo">
+                <span class="logo-icon">▶</span>
+                <span>Cine<span>Verse</span></span>
+            </div>
+
+            <p>
+                Your cinematic universe. Discover, explore,
+                and fall in love with movies.
+            </p>
+
+        </div>
+
+        <div class="footer-column">
+
+            <h3>Explore</h3>
+
+            <a href="#trending">Trending</a>
+            <a href="#popular">Popular</a>
+            <a href="#topRated">Top Rated</a>
+            <a href="#genres">Genres</a>
+
+        </div>
+
+        <div class="footer-column">
+
+            <h3>Company</h3>
+
+            <a href="#">About Us</a>
+            <a href="#">Contact</a>
+            <a href="#">Privacy</a>
+            <a href="#">Terms</a>
+
+        </div>
+
+        <div class="footer-column">
+
+            <h3>Follow</h3>
+
+            <a href="#">Instagram</a>
+            <a href="#">TikTok</a>
+            <a href="#">Twitter</a>
+            <a href="#">YouTube</a>
+
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+
+        <p>
+            © 2026 CineVerse. All rights reserved.
+        </p>
+
+        <p>
+            This product uses the TMDB API but is not endorsed or certified by TMDB.
+        </p>
+
+    </div>
+
+</footer>
+
+
+<!-- ================= MOVIE MODAL ================= -->
+
+<div class="movie-modal" id="movieModal">
+
+    <div class="modal-overlay" id="modalOverlay"></div>
+
+    <div class="modal-content">
+
+        <button class="close-modal" id="closeModal">
+            ✕
+        </button>
+
+        <div id="modalBody"></div>
+
+    </div>
+
+</div>
+
+
+<!-- ================= LOADING ================= -->
+
+<div class="loading-screen" id="loadingScreen">
+
+    <div class="loader"></div>
+
+    <p>Loading CineVerse...</p>
+
+</div>
+
+
+<!-- ================= TOAST ================= -->
+
+<div class="toast" id="toast"></div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
